@@ -10,9 +10,9 @@ System.out.println(doctor+" ");
 try{
 	Connection con=ConnectionProvider.getcon();
 	Statement st=con.createStatement();
-	//ResultSet rsDoc = st.executeQuery("select * from doctor where name = '"+doctor+"'");
-	//rsDoc.next();
-	//System.out.print(rsDoc.getString(2));
+	ResultSet rsDoc = st.executeQuery("select * from doctor where doc_id = '"+doctor+"'");
+	rsDoc.next();
+	System.out.print(rsDoc.getString(2));
 	ResultSet rs = st.executeQuery("select * from appointments");
 	st.executeUpdate("insert into appointments values('"+name+"',"+Integer.parseInt(phone)+",'"+doctor+"','"+date+"')");
 	response.sendRedirect("Appointments.jsp");
@@ -21,5 +21,7 @@ try{
 catch(Exception e)
 {
 	System.out.print(e.getMessage());
+	response.sendRedirect("errorPage.jsp");
+
 	}
 %> 

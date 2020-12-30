@@ -47,7 +47,7 @@
 try{
 	Connection con = Project.ConnectionProvider.getcon();
 	Statement st = con.createStatement();
-	ResultSet rs = st.executeQuery("select * from appointments");
+	ResultSet rs = st.executeQuery("select a.name, a.phone, d.name, a.date from appointments a, doctor d where a.doctor_id = d.doc_id");
 	while(rs.next()){
 		System.out.println(rs.getString(1)+" "+rs.getString(2));
 	%>

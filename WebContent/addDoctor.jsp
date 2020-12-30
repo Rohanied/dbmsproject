@@ -24,11 +24,12 @@ try{
 		 System.out.println(newID);
 	}
 	
-	st.executeUpdate("insert into Doctor values('"+newID+"','"+name+"',"+Integer.parseInt(phone)+",'"+speciality+"','"+consultation+"',"+Integer.parseInt(salary)+")");
+	st.executeUpdate("insert into Doctor values('"+newID+"','"+name+"',"+Double.parseDouble(phone)+",'"+speciality+"','"+consultation+"',"+Integer.parseInt(salary)+")");
 	response.sendRedirect("index.jsp");
 }
 catch(Exception e)
 {
 	System.out.print(e.getMessage());
+	response.sendRedirect("errorPage.jsp");
 	}
 %>  

@@ -48,7 +48,7 @@
 try{
 	Connection con = Project.ConnectionProvider.getcon();
 	Statement st = con.createStatement();
-	ResultSet rs = st.executeQuery("select * from staffs");
+	ResultSet rs = st.executeQuery("select s.staff_id,s.name,s.phone,s.gender,d.department_name,s.shift,s.salary from staffs s, department d where s.department_id = d.department_id");
 	while(rs.next()){
 		System.out.println(rs.getString(1)+" "+rs.getString(2));
 	%>
@@ -71,7 +71,7 @@ try{
         </table>
     </div>
     <form action="deleteStaff.jsp" method="post">
-        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter the Staff ID to be deleted<input class="form-control" name="doc_id" type="number">&nbsp;</label></div>
+        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter the Staff ID to be deleted<input class="form-control" name="doc_id" type="text">&nbsp;</label></div>
         <button class="btn btn-primary" type="submit" style="margin-left: 280px;">Delete</button></form>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

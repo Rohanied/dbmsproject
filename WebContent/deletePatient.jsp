@@ -8,7 +8,7 @@ try{
 	Connection con=ConnectionProvider.getcon();
 	Statement st=con.createStatement();
 	System.out.println(doc_id);
-	boolean b = st.execute("delete from patients where patient_id ="+Integer.parseInt(doc_id));
+	boolean b = st.execute("delete from patients where patient_id ='"+doc_id+"'");
 	response.sendRedirect("Patients.jsp");
 }
 	

@@ -31,9 +31,9 @@
 	Statement st = con.createStatement();
 	ResultSet rs = st.executeQuery("select * from doctor");
 	while(rs.next()){
-		System.out.println("Book new app"+rs.getInt(1)+" "+rs.getString(2));
+		System.out.println("Book new app"+rs.getString(1)+" "+rs.getString(2));
 	%>
-            		<option ><%=rs.getInt(1) %></option>
+            		<option value = "<%=rs.getString(1)%> "><%=rs.getString(2) %></option>
             		<% }
 }
 	catch(Exception e){

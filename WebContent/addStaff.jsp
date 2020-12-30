@@ -12,8 +12,10 @@ try{
 	Connection con=ConnectionProvider.getcon();
 	Statement st=con.createStatement();
 	ResultSet rs = st.executeQuery("select * from staffs");
-	rs.last();
-	String id = rs.getString(1);
+	String id;
+	System.out.println(department+" "+shift);
+	System.out.println(rs.last());
+	id = rs.getString(1);
 	int intId = Integer.parseInt(id.substring(2,4)) + 1;
 	String newID = " ";
 	if(intId>9){
@@ -31,5 +33,7 @@ try{
 catch(Exception e)
 {
 	System.out.print(e.getMessage());
+	response.sendRedirect("errorPage.jsp");
+
 	}
 %> 

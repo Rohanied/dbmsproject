@@ -1,6 +1,8 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+      <%@ page import="java.sql.*" %>
+<%@ page import="Project.ConnectionProvider" %> 
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +33,26 @@
             <div class="form-group"><input class="form-control" type="text" name="age" placeholder="Age"></div>
             <div class="form-group"><input class="form-control" type="text" name="address" placeholder="Address"></div>
             <div class="form-group"><input class="form-control" type="text" name="phone" placeholder="Phone"></div>
-            <div class="form-group"><input class="form-control" type="text" name="doctor" placeholder="Consulting Doctor"></div>
+            <div class="form-group"><label>Consultation</label><select class="form-control" name="doctor">
+            	<optgroup label="Select the Doctor">
+            	<%
+            	try{
+	Connection con = Project.ConnectionProvider.getcon();
+	Statement st = con.createStatement();
+	ResultSet rs = st.executeQuery("select * from doctor");
+	while(rs.next()){
+		System.out.println("Book new app"+rs.getString(1)+" "+rs.getString(2));
+	%>
+            		<option value = "<%=rs.getString(1)%> "><%=rs.getString(2) %></option>
+            		<% }
+}
+	catch(Exception e){
+		System.out.print("jsp: "+e);
+	}
+	%>
+            	</optgroup>
+            </select>
+            </div>
             <div class="form-group"><input class="form-control" type="text" name="ward" placeholder="Ward Number"></div>
             <div class="form-group">
             <button type="submit" class="btn btn-primary" style="margin-left: 60px;background: #055ada;width: 97px;height: 50px;text-align: left;padding-bottom: 16px;">Submit&nbsp;</button>

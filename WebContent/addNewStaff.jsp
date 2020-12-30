@@ -21,9 +21,9 @@
         <form method="post" style="padding-top: 40px;padding-right: 40px;padding-bottom: 40px;padding-left: 40px;" action="addStaff.jsp">
             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
             <div class="form-group"><input class="form-control" type="text" name="phone" placeholder="Phone"></div>
-            <div class="form-group"><label>Gender</label><select class="form-control" name="gender"><option value="12" selected="">Male</option><option value="14">Female</option></select></div>
-            <div class="form-group"><label>Department</label><select class="form-control" name="department"><optgroup label="This is a group"><option value="12" selected="">This is item 1</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
-            <div class="form-group"><label>Shift</label><select class="form-control" name="shift"><optgroup label="This is a group"><option value="12" selected="">This is item 1</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
+            <div class="form-group"><label>Gender</label><select class="form-control" name="gender"><option value="Male" selected="">Male</option><option value="Female">Female</option></select></div>
+            <div class="form-group"><label>Department</label><select class="form-control" name="department"><optgroup label="This is a group"><option value="DP01" selected="">Accounts</option><option value="DP02">House Keeping</option><option value="DP03">Security</option></optgroup></select></div>
+            <div class="form-group"><label>Shift</label><select class="form-control" name="shift"><optgroup label="This is a group"><option value="Day" selected="">Day</option><option value="Night">Night</option></optgroup></select></div>
     <div class="form-group"><input class="form-control" type="text" name="salary" placeholder="Salary"></div>
         <div class="form-group">
 <button type="submit" value="Submit" class="btn btn-primary"  style=" margin-left: 60px; background: #055ada;width: 97px;height: 50px;text-align: left ;padding-bottom: 16px;">Submit</button>        <a class="btn btn-primary" role="button" href="index.jsp" style="margin-left: 50px;background: linear-gradient(rgb(255,255,255), white), rgb(255,255,255);border: 2px solid rgb(5,90,218);color: rgb(5,90,218);width: 120px;height: 50px;">CANCEL&nbsp;</a></div>

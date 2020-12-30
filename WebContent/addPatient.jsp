@@ -26,11 +26,13 @@ try{
 		 System.out.println(newID);
 	}
 	
-	st.executeUpdate("insert into Patients values('"+newID+"','"+name+"','"+gender+"','"+age+"','"+address+"',"+Integer.parseInt(phone)+",'Admitted','"+doctor+"','"+ward+"')");
+	st.executeUpdate("insert into Patients values('"+newID+"','"+name+"','"+gender+"','"+age+"','"+address+"',"+Double.parseDouble(phone)+",'Admitted','"+doctor+"','"+ward+"')");
 	response.sendRedirect("Patients.jsp");
 }
 catch(Exception e)
 {
 	System.out.print(e.getMessage());
+	response.sendRedirect("errorPage.jsp");
+
 	}
 %> 

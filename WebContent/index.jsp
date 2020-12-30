@@ -54,7 +54,6 @@ try{
 	Statement st = con.createStatement();
 	ResultSet rs = st.executeQuery("select * from doctor");
 	while(rs.next()){
-		System.out.println(rs.getString(1)+" "+rs.getString(2));
 	%>
                     <td style="border: 1px solid #000000 ;"><%=rs.getString(1) %></td>
                     <td style="border: 1px solid #000000 ;"><%=rs.getString(2) %></td>
@@ -73,9 +72,21 @@ try{
             </tbody>
         </table>
     </div>
+   <div class="row">
+  <div class="column">
     <form action="deleteDoctor.jsp" method="post">
-        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter the Doctor ID to be deleted<input class="form-control" name="doc_id" type="number">&nbsp;</label></div>
+        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter the Doctor ID to be deleted<input class="form-control" name="doc_id" type="text">&nbsp;</label></div>
         <button class="btn btn-primary" type="submit" style="margin-left: 280px;">Delete</button></form>
+  </div>
+  <div class="column">
+  </div>
+  <div class="column">
+     <form action="updateSalary.jsp" method="post">
+        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter The Doc ID<input class="form-control" name="doc_id" type="text">&nbsp;</label></div>
+        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter the raise Percentage<input class="form-control" name="raise" type="number">&nbsp;</label></div> 
+        <button class="btn btn-primary" type="submit" style="margin-left: 280px;">Submit</button></form>
+  </div>
+</div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
