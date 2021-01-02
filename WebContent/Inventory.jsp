@@ -62,6 +62,9 @@ try{
             </tbody>
         </table>
     </div>
+    
+     <a class="btn btn-primary" role="button" style="font-family: Almarai, sans-serif;font-size: 20px;margin-top: 20px;margin-bottom: 0px;margin-right: 0px;margin-left: 500px;" href="exhaustedItems.jsp">Exhausted Items</a>
+    
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
