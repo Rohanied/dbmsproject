@@ -17,9 +17,9 @@
 </head>
 
 <body style="border-color: rgba(33,37,41,0);">
-    <h1 style="color: rgb(72,115,157);font-size: 40;font-family: Almarai, sans-serif;padding: 10px;">Hospital Database Management System</h1>
+   <a href="index.jsp"><h1 style="color: rgb(72,115,157);font-size: 40;font-family: Almarai, sans-serif;padding: 10px;">Hospital Database Management System</h1></a>
     <ul class="nav nav-tabs" style="font-size: 30px;font-family: Alatsi, sans-serif;background: #4760b6;color: #ffffff;">
-         <li class="nav-item"><a class="nav-link" href="index.jsp" style="color: rgb(255,255,255);border-style: solid;border-color: rgba(0,0,0,0);border-right-color: #000000;">Doctors</a></li>
+         <li class="nav-item"><a class="nav-link" href="doctor.jsp" style="color: rgb(255,255,255);border-style: solid;border-color: rgba(0,0,0,0);border-right-color: #000000;">Doctors</a></li>
         <li class="nav-item"><a class="nav-link" href="Patients.jsp" style="color: rgb(255,255,255);border-style: solid;border-color: rgba(0,0,0,0);border-right-color: #000000;">Patients</a></li>
         <li class="nav-item"><a class="nav-link" href="Staffs.jsp" style="color: rgb(255,255,255);border-right-style: solid;border-right-color: #000000;">Staffs</a></li>
         <li class="nav-item"><a class="nav-link" href="Wards.jsp" style="border-right-color: #000000;color: rgb(255,255,255);">Wards</a></li>
@@ -63,8 +63,21 @@ try{
         </table>
     </div>
     
-     <a class="btn btn-primary" role="button" style="font-family: Almarai, sans-serif;font-size: 20px;margin-top: 20px;margin-bottom: 0px;margin-right: 0px;margin-left: 500px;" href="exhaustedItems.jsp">Exhausted Items</a>
     
+     <div class="row">
+  <div class="column">
+    <a class="btn btn-primary" role="button" style="font-family: Almarai, sans-serif;font-size: 20px;margin-top: 20px;margin-bottom: 0px;margin-right: 0px;margin-left: 200px;" href="exhaustedItems.jsp">Exhausted Items</a>
+     </div>
+  <div class="column">
+  </div>
+  <div class="column">
+     <form action="updateRemainingItems.jsp" method="post">
+        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter the item name<input class="form-control" name="item" type="text">&nbsp;</label></div>
+        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter the number of items<input class="form-control" name="value" type="number">&nbsp;</label></div> 
+        <button class="btn btn-primary" type="submit" style="margin-left: 280px;">Submit</button></form>
+  </div>
+</div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

@@ -15,5 +15,6 @@ try{
 catch(Exception e)
 {
 	System.out.print(e.getMessage());
+	response.sendRedirect("errorPage.jsp");
 	}
 %>  

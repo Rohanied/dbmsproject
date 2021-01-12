@@ -25,7 +25,7 @@ try{
 	}
 	
 	st.executeUpdate("insert into Doctor values('"+newID+"','"+name+"',"+Double.parseDouble(phone)+",'"+speciality+"','"+consultation+"',"+Integer.parseInt(salary)+")");
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("doctor.jsp");
 }
 catch(Exception e)
 {

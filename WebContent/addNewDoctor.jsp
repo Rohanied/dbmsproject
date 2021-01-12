@@ -21,7 +21,7 @@
         <form method="post" style="padding-top: 40px;padding-right: 40px;padding-bottom: 40px;padding-left: 40px;" action="addDoctor.jsp">
             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
             <div class="form-group"><input class="form-control is-invalid" type="text" name="phone" placeholder="Phone"></div>
-            <div class="form-group"><input class="form-control" type="text" name="speciality" placeholder="Speciality"></div>
+            <div class="form-group"><label>Speciality</label><select class="form-control" name="speciality"><optgroup><option selected="">Pediatrics</option><option>Radiology</option><option>Dermatology</option><option>Oncology</option><option>Ophthalmologist</option><option>Nefrologist</option></optgroup></select></div>
             <div class="form-group"><label>Consultation</label><select class="form-control" name="consultation">
             <optgroup >
             	<option value="Residential" selected="">Residential</option>

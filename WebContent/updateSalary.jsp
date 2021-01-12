@@ -17,11 +17,12 @@ try{
 	System.out.println(Sal);
 	boolean b = st.execute("update doctor set salary = "+Sal+"where doc_id = '"+doc_id+"'");
 	System.out.print(b);
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("doctor.jsp");
 }
 	
 catch(Exception e)
 {
 	System.out.print(e.getMessage());
+	response.sendRedirect("errorPage.jsp");
 	}
 %>  

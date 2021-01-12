@@ -10,11 +10,12 @@ try{
 	System.out.println(doc_id);
 	boolean b = st.execute("delete from doctor where doc_id = '"+doc_id+"'");
 	System.out.print(b);
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("doctor.jsp");
 }
 	
 catch(Exception e)
 {
 	System.out.print(e.getMessage());
+	response.sendRedirect("errorPage.jsp");
 	}
 %>  
