@@ -20,7 +20,7 @@
 <body style="border-color: rgba(33,37,41,0);">
    <a href="index.jsp"><h1 style="color: rgb(72,115,157);font-size: 40;font-family: Almarai, sans-serif;padding: 10px;">Hospital Database Management System</h1></a>
    <ul class="nav nav-tabs" style="font-size: 30px;font-family: Alatsi, sans-serif;background: #4760b6;color: #ffffff;">
-        <li class="nav-item"><a class="nav-link" href="docor.jsp" style="color: rgb(255,255,255);border-style: solid;border-color: rgba(0,0,0,0);border-right-color: #000000;">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctor.jsp" style="color: rgb(255,255,255);border-style: solid;border-color: rgba(0,0,0,0);border-right-color: #000000;">Doctors</a></li>
         <li class="nav-item"><a class="nav-link" href="Patients.jsp" style="color: rgb(255,255,255);border-style: solid;border-color: rgba(0,0,0,0);border-right-color: #000000;">Patients</a></li>
         <li class="nav-item"><a class="nav-link" href="Staffs.jsp" style="color: rgb(255,255,255);border-right-style: solid;border-right-color: #000000;">Staffs</a></li>
         <li class="nav-item"><a class="nav-link" href="Wards.jsp" style="border-right-color: #000000;color: rgb(255,255,255);">Wards</a></li>
@@ -36,7 +36,7 @@
   <div class="column">
   </div>
   <div class="column">
-     <form action="index.jsp" method="post" >
+     <form action="doctor.jsp" method="post" >
         <div class="form-group" ><label>Speciality</label><select class="form-control" name="specialityIndex"><optgroup><option selected="">Pediatrics</option><option>Radiology</option><option>Dermatology</option><option>Oncology</option><option>Ophthalmologist</option><option>Nefrologist</option></optgroup></select></div>
         <button class="btn btn-primary" type="submit" style="margin-left: 280px;">GO</button></form>
   </div>

@@ -71,9 +71,53 @@
             </tbody>
         </table>
     </div>
+       <div class="row">
+  <div class="column">
     <form action="deletePatient.jsp" method="post">
         <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter the Patient ID to be deleted<input class="form-control" name="doc_id" type="text">&nbsp;</label></div>
         <button class="btn btn-primary" type="submit" style="margin-left: 280px;">Delete</button></form>
+  </div>
+  <div class="column">
+  </div>
+  <div class="column">
+     <form action="UpdatePatient.jsp" method="post">
+        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Enter The Patient ID<input class="form-control" name="patient_id" type="text">&nbsp;</label></div>
+        <div class="form-group"><label style="margin-left: 200px;margin-bottom: 0px;">Select The New Doctor</label><select class="form-control" name="doctor"  style="width: 150px; margin-left: 200px">
+            	<optgroup label="Select the Doctor">
+            	<%
+            	try{
+	Connection con = Project.ConnectionProvider.getcon();
+	Statement st = con.createStatement();
+	ResultSet rs = st.executeQuery("select * from doctor");
+	while(rs.next()){
+		System.out.println("Book new app"+rs.getString(1)+" "+rs.getString(2));
+	%>
+            		<option value = "<%=rs.getString(1)%> "><%=rs.getString(2) %></option>
+            		<% }
+}
+	catch(Exception e){
+		System.out.print("jsp: "+e);
+	}
+	%>
+            	</optgroup>
+            </select>
+            </div> <button class="btn btn-primary" type="submit" style="margin-left: 280px;">Submit</button></form>
+  </div>
+   <div class="column">
+  </div>
+  <form action="UpdatePatientStatus.jsp" method="post">
+        <div class="form-group"><label style="margin-left: 250px;margin-bottom: 0px;">Enter The Patient ID<input class="form-control" name="patient_id" type="text">&nbsp;</label></div>
+        <div class="form-group"><label style="margin-left: 250px;margin-bottom: 0px;">Select The New Doctor</label><select class="form-control" name="status" style="width: 150px; margin-left: 250px">
+            	<optgroup label="Select the status">
+            	<option value = "Admitted">Admitted</option>
+            	<option value = "Discharged">Discharged</option>
+            	
+            	</optgroup>
+            </select>
+            </div> <button class="btn btn-primary" type="submit" style="margin-left: 280px;">Submit</button></form>
+</div>
+    
+   
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

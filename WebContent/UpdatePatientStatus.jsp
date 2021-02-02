@@ -4,15 +4,15 @@
 <%@ page import="Project.ConnectionProvider" %> 
 <%@ page import="java.sql.*" %>
 <%
-String item = request.getParameter("item");
-String value = request.getParameter("value");
+String patient_id = request.getParameter("patient_id");
+String doctor = request.getParameter("status");
 try{
 	Connection con=ConnectionProvider.getcon();
 	Statement st=con.createStatement();
-	item.substring(0,1).toUpperCase();
-	int valueInt = Integer.parseInt(value);
-	boolean b = st.execute("update inventory set remaining_items = remaining_items+"+valueInt+" where item = '"+item+"'");
-	response.sendRedirect("Inventory.jsp");
+	//System.out.println(doc_id);
+	st.executeUpdate("update patients set status = '"+doctor+"' where patient_id = '"+patient_id+"'");
+	//System.out.print(b);
+	response.sendRedirect("Patients.jsp");
 }
 	
 catch(Exception e)

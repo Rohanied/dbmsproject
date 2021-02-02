@@ -66,7 +66,7 @@ try{
     
      <div class="row">
   <div class="column">
-    <a class="btn btn-primary" role="button" style="font-family: Almarai, sans-serif;font-size: 20px;margin-top: 20px;margin-bottom: 0px;margin-right: 0px;margin-left: 200px;" href="exhaustedItems.jsp">Exhausted Items</a>
+    <a class="btn btn-primary" role="button" style="font-family: Almarai, sans-serif;font-size: 20px;margin-top: 20px;margin-bottom: 0px;margin-right: 0px;margin-left: 200px;" href="exhaustedItems.jsp">To-Be Exhausted Items</a>
      </div>
   <div class="column">
   </div>
